@@ -3,7 +3,7 @@ import { ThisPlaylistHomeLayout } from "../Layout/ThisPlaylist";
 
 export function PlaylistHome() {
   return (
-    <div className="flex flex-wrap">
+    <div className="grid grid-cols-3">
       <PlaylistHomeLayout
         img1="/img/Babymetal1.jpg"
         img2="/img/Babymetal2.jpg"

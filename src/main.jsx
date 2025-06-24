@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { Home } from "../src/Page/home";
 import { Login } from "./Page/login";
 import { Register } from "./Page/register";
@@ -10,9 +10,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
@@ -36,7 +35,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
-//     element: <Login />,
+//     element: <Home />,
 //   },
 //   {
 //     path: "/login",
@@ -54,6 +53,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 // ReactDOM.createRoot(document.getElementById("root")).render(
 //   <React.StrictMode>
-//     <RouterProvider router={router}></RouterProvider>
+//     <RouterProvider router={router} />
 //   </React.StrictMode>
 // );
